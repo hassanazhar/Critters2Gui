@@ -3,6 +3,7 @@ package assignment5;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public abstract class Critter {
@@ -39,8 +40,8 @@ public abstract class Critter {
 	private	static List<Critter> population = new java.util.ArrayList<Critter>();
 	private static List<Critter> babies = new java.util.ArrayList<Critter>();
 	private static int[][] map = new int[Params.world_width][Params.world_height];
-	private static String [] realCritters = {"assignment4.Algae","assignment4.Craig","assignment4.Boss",
-			"assignment4.Ali", "assignment4.Tank","assignment4.BigBoss"};
+	private static String [] realCritters = {"assignment5.Algae","assignment5.Craig","assignment5.Boss",
+			"assignment5.Ali", "assignment5.Tank","assignment5.BigBoss"};
 	private final int torusx(int moves, int xcoord){
 		if ((xcoord+moves)>(Params.world_width-1)){
 			return(moves-1);
@@ -492,15 +493,63 @@ public abstract class Critter {
 			}
 		}
 	}
+	//NOT SURE IF I CAN MAKE PUBLIC METHOD
+	public static LinkedList<Critter> getalivecritters(){
+		LinkedList<Critter> newlist=new LinkedList<>();
+		for(Critter a: population){
+			if(a.isAlive){
+				newlist.add(a);
+			}
+		}
+		return newlist;
+	}
 	//DONE HELPER
 	//NEED TO DO DISPLAYWORLD
-	public static void displayWorld(Object pane) {
+	//public static void displayWorld(Object pane) {
+
+	//}
+	 //Alternate displayWorld, where you use Main.<pane> to reach into your
+	   //display component.
+	//NEED TO MAKE THIS APPEAR IN GRID ON FX
+	public static void displayWorld() {
+		int width = Params.world_width+2;
+		int height = Params.world_height+2;
+		char[][]worldmap=new char[width][height];
+		for(int i=0;i<width;i++){
+			for(int j=0;j<height;j++){
+				if((i==0&&j==0)||(i==width-1&&j==height-1)||(i==0&&j==height-1)||(i==width-1)&&(j==0)){
+					worldmap[i][j]='+';
+				}
+				else if (i==0&&j!=0){
+					worldmap[i][j]='-';
+				}
+				else if(j==0&&i!=0){
+					worldmap[i][j]='|';
+				}
+				else if(i==width-1){
+					worldmap[i][j]='-';
+				}
+				else if(j==height-1){
+					worldmap[i][j]='|';
+				}
+				else{
+					worldmap[i][j]=' ';
+				}
+			}
+		}
+		//Add critters to display
+		for(Critter a : population){
+			worldmap[a.x_coord+1][a.y_coord+1]=a.toString().charAt(0);
+		}
+		for(int i=0;i<width;i++){
+			for(int j=0;j<height;j++){
+				System.out.print(worldmap[i][j]);
+			}
+			System.out.println();
+		}
 
 	}
-	/* Alternate displayWorld, where you use Main.<pane> to reach into your
-	   display component.
-	   // public static void displayWorld() {}
-	*/
+
 	
 	/* create and initialize a Critter subclass
 	 * critter_class_name must be the name of a concrete subclass of Critter, if not
@@ -513,7 +562,7 @@ public abstract class Critter {
 		Constructor<?> consttr;
 		boolean real = false;
 		//critter_class_name = critter_class_name.substring(0,1).toUpperCase()+critter_class_name.substring(1);
-		critter_class_name="assignment4."+critter_class_name;
+		critter_class_name="assignment5."+critter_class_name;
 		for(String A: realCritters){
 			//String blah = "assignment4."+critter_class_name;
 			if (A.equals(critter_class_name)){
