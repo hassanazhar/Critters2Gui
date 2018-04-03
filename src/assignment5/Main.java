@@ -22,6 +22,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Shape;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -31,8 +33,8 @@ import javafx.scene.paint.*;
 import javafx.scene.shape.*;
 
 import java.awt.*;
-import java.awt.Rectangle;
-import java.awt.Shape;
+//import java.awt.Rectangle;
+//import java.awt.Shape;
 import java.lang.reflect.Modifier;
 import java.net.URISyntaxException;
 import java.util.*;
@@ -101,7 +103,6 @@ public class Main extends Application {
 		secondStage.show();
 		//Need to paint items on grid now.
 
-
 		System.out.println("start method");
 	}
 	public static void main(String[] args) {
@@ -146,6 +147,13 @@ public class Main extends Application {
     public  void makeGridWorld(GridPane grid){
 		for(int r=0;r<Params.world_width;r++){
 			for(int c = 0; c<Params.world_height; c++){
+				// Explicit Fix
+				javafx.scene.shape.Shape rect = new javafx.scene.shape.Rectangle();
+				rect.setFill(Color.GREEN);
+				rect.setFill(Color.RED);
+
+				// Fix where i remove the unnecessary import statements
+				// Use 'alt-enter' to select the correct class declarations
 				Shape r1 = new Rectangle(1,1);
 				r1.setFill(Color.BLUE);
 				r1.setStroke(Color.BLACK);
