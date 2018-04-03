@@ -19,6 +19,7 @@ import javafx.geometry.Pos;
 import javafx.geometry.VPos;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -26,9 +27,12 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Polygon;
+import javafx.scene.paint.*;
+import javafx.scene.shape.*;
 
-import java.awt.Dimension;
-import java.awt.Toolkit;
+import java.awt.*;
+import java.awt.Rectangle;
+import java.awt.Shape;
 import java.lang.reflect.Modifier;
 import java.net.URISyntaxException;
 import java.util.*;
@@ -47,7 +51,7 @@ public class Main extends Application {
 	// copy paste different cases into main from main lab 4
 	//world
 	private static Pane pane = new StackPane();//stays in middle
-	private static Pane world = new GridPane();//stays in top left
+	private static Pane crittergrid = new GridPane();//stays in top left
 	//shapes
 	private static Circle circle = new Circle();
 	private static Polygon square = new Polygon();
@@ -86,15 +90,20 @@ public class Main extends Application {
             return;
         }
 		Scene scene = new Scene(root,root.prefWidth(root.getLayoutX()),root.prefHeight(root.getLayoutY()));
-		primarystage.setTitle("CRITTER WORLD");
+		primarystage.setTitle("Controls");
 		primarystage.setScene(scene);
 		primarystage.show();
+
+		Stage secondStage = new Stage();
+		Scene scene2 = new Scene(crittergrid,Params.world_width,Params.world_height);
+		secondStage.setTitle("Critter Grid");
+		secondStage.setScene(scene2);
+		secondStage.show();
+		//Need to paint items on grid now.
+
+
 		System.out.println("start method");
 	}
-	public void pressButton(ActionEvent event){
-	    System.out.println("HELLO");
-
-    }
 	public static void main(String[] args) {
 		 Application.launch(args);
 
@@ -133,6 +142,17 @@ public class Main extends Application {
     public void end(ActionEvent event) {
 		System.exit(0);
     }
+
+    public  void makeGridWorld(GridPane grid){
+		for(int r=0;r<Params.world_width;r++){
+			for(int c = 0; c<Params.world_height; c++){
+				Shape r1 = new Rectangle(1,1);
+				r1.setFill(Color.BLUE);
+				r1.setStroke(Color.BLACK);
+				grid.add(r1,c,r);
+			}
+		}
+	}
 
     public void startAni(ActionEvent actionEvent) {
     }
