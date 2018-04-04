@@ -1,7 +1,6 @@
 package assignment5;
 
-import javafx.animation.AnimationTimer;
-import javafx.animation.Timeline;
+import javafx.animation.*;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
@@ -46,17 +45,15 @@ import sun.awt.image.ImageWatched;
 import javax.swing.*;
 import javax.xml.soap.Text;
 
-import static javafx.application.Application.launch;
+import javafx.util.Duration;
 
 public class Main extends Application {
 	//copy/paste preibe hello world example. make bunch of buttons and handlers
 	// copy paste different cases into main from main lab 4
 	//world
 	private static Pane pane = new StackPane();//stays in middle
-
-	private GridPane crittergrid = new GridPane();//stays in top left
 	private Stage secondStage = new Stage();
-	private Scene scene2;
+	private GridPane rootGrid = new GridPane();
 
 	//shapes
 	private static Circle circle = new Circle();
@@ -135,6 +132,9 @@ public class Main extends Application {
 	}
 	//done
 	public void showWorld(ActionEvent event) {
+		GridPane crittergrid = new GridPane();
+		makeGridWorld(crittergrid);
+
 		try {
 			crittergrid.getChildren().clear();
 			makeGridWorld(crittergrid);
@@ -178,32 +178,53 @@ public class Main extends Application {
 		}
 	}
 	//WORK ON BELOW. ADD ANIMATION
+	int count = 0;
 	public void startAni(ActionEvent actionEvent) {
-		//secondStage.close();
+		int numani = Integer.parseInt(numAni.getText());
+		Timeline animation = new Timeline(new KeyFrame(Duration.seconds(1), e->critterstep()));
+		animation.setCycleCount(numani);
+		animation.play();
 
+		Scene scene = new Scene(rootGrid, 10*Params.world_width, 10*Params.world_height);
+		secondStage.setTitle("Critter Grid");
+		secondStage.setScene(scene);
+		secondStage.show();
+
+		//gridWorld.requestFocus();
+		/*
 		try {
 			int numani = Integer.parseInt(numAni.getText());
 			for (int i = 0; i < numani; i++) {
-				secondStage.close();
+				GridPane rootGrid = new GridPane();
 				Critter.worldTimeStep();
-				crittergrid.getChildren().clear();
-				makeGridWorld(crittergrid);
-				Critter.displayWorld(crittergrid);
+				rootGrid.getChildren().clear();
+				makeGridWorld(rootGrid);
+				Critter.displayWorld(rootGrid);
 				Critter.displayWorld();
 
-				/*
-				scene2 = new Scene(crittergrid, Params.world_width, Params.world_height);
-				secondStage.setScene(scene2);
-				secondStage.show();
-				secondStage.close();
-				*/
+				PathTransition pt = new PathTransition();
+				pt.setDuration(Duration.millis(10000));
 
 			}
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
+
+		*/
 		}
+
+	public void critterstep(){
+		Critter.worldTimeStep();
+		rootGrid.getChildren().clear();
+		makeGridWorld(rootGrid);
+		Critter.displayWorld(rootGrid);
+		Critter.displayWorld();
+		count = count + 1;
+		System.out.println("This is run: " + count);
+	}
+
+
 
 	public void stopAni(ActionEvent actionEvent) {
 	}
