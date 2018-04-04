@@ -53,7 +53,9 @@ public class Main extends Application {
 	// copy paste different cases into main from main lab 4
 	//world
 	private static Pane pane = new StackPane();//stays in middle
-	private static Pane crittergrid = new GridPane();//stays in top left
+	private GridPane crittergrid = new GridPane();//stays in top left
+	static Stage secondStage = new Stage();
+	Scene scene2;
 	//shapes
 	private static Circle circle = new Circle();
 	private static Polygon square = new Polygon();
@@ -81,24 +83,24 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage primarystage){
-	//	selectbox.getItems().addAll(
-	//			"Algae","Ali","Tank","Boss","BigBoss","Craig"
-	//	);
-	    Parent root=null;
-	    try {
-             root = FXMLLoader.load(getClass().getResource("assignment5.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-            return;
-        }
+		//	selectbox.getItems().addAll(
+		//			"Algae","Ali","Tank","Boss","BigBoss","Craig"
+		//	);
+		Parent root=null;
+		try {
+			root = FXMLLoader.load(getClass().getResource("assignment5.fxml"));
+		} catch (IOException e) {
+			e.printStackTrace();
+			return;
+		}
 		Scene scene = new Scene(root,root.prefWidth(root.getLayoutX()),root.prefHeight(root.getLayoutY()));
 		primarystage.setTitle("Controls");
 		primarystage.setScene(scene);
 		primarystage.show();
-
-		Stage secondStage = new Stage();
-		Scene scene2 = new Scene(crittergrid,Params.world_width,Params.world_height);
+		scene2 = new Scene(crittergrid,Params.world_width,Params.world_height);
+		//Scene scene2 = new Scene(crittergrid,Params.world_width,Params.world_height);
 		secondStage.setTitle("Critter Grid");
+		makeGridWorld(crittergrid);
 		secondStage.setScene(scene2);
 		secondStage.show();
 		//Need to paint items on grid now.
@@ -106,7 +108,7 @@ public class Main extends Application {
 		System.out.println("start method");
 	}
 	public static void main(String[] args) {
-		 Application.launch(args);
+		Application.launch(args);
 
 	}
 	//done
@@ -121,50 +123,86 @@ public class Main extends Application {
 		}catch(InvalidCritterException e){
 			throw new InvalidCritterException(critname);
 		}
-    }
+	}
 	//done
-    public void numTimeSteps(ActionEvent event) {
+	public void numTimeSteps(ActionEvent event) {
 		int numts = Integer.parseInt(numSteps.getText());
 		for(int i=0; i<numts;i++) {
 			Critter.worldTimeStep();
 		}
-    }
+		System.out.println("DONE");
+	}
 	//done
-    public void showWorld(ActionEvent event) {
-		Critter.displayWorld();
+	public void showWorld(ActionEvent event) {
+		try {
+			crittergrid.getChildren().clear();
+			makeGridWorld(crittergrid);
+			Critter.displayWorld(crittergrid);
+			Critter.displayWorld();
 
-    }
+			Scene scene = new Scene(crittergrid, Params.world_width, Params.world_height);
+			//makeGridWorld(crittergrid);
+			secondStage.setScene(scene);
+			secondStage.show();
+		}
+		catch(Exception e){
+		}
+
+	}
 	//done
-    public void stats(ActionEvent event) {
+	public void stats(ActionEvent event) {
 		LinkedList<Critter> new2= Critter.getalivecritters();
 		Critter.runStats(new2);
-    }
+	}
 	//done
-    public void end(ActionEvent event) {
+	public void end(ActionEvent event) {
 		System.exit(0);
-    }
+	}
 
-    public  void makeGridWorld(GridPane grid){
+	public  void makeGridWorld(GridPane grid){
 		for(int r=0;r<Params.world_width;r++){
 			for(int c = 0; c<Params.world_height; c++){
 				// Explicit Fix
-				javafx.scene.shape.Shape rect = new javafx.scene.shape.Rectangle();
-				rect.setFill(Color.GREEN);
-				rect.setFill(Color.RED);
+				//javafx.scene.shape.Shape rect = new javafx.scene.shape.Rectangle();
+				//rect.setFill(Color.GREEN);
+				//rect.setFill(Color.RED);
 
 				// Fix where i remove the unnecessary import statements
 				// Use 'alt-enter' to select the correct class declarations
-				Shape r1 = new Rectangle(1,1);
-				r1.setFill(Color.BLUE);
+				Shape r1 = new Rectangle(10,10);
+				r1.setFill(null);
 				r1.setStroke(Color.BLACK);
 				grid.add(r1,c,r);
 			}
 		}
 	}
+	//WORK ON BELOW. ADD ANIMATION
+	public void startAni(ActionEvent actionEvent) {
+		//secondStage.close();
 
-    public void startAni(ActionEvent actionEvent) {
-    }
+		try {
+			int numani = Integer.parseInt(numAni.getText());
+			for (int i = 0; i < numani; i++) {
+				secondStage.close();
+				Critter.worldTimeStep();
+				crittergrid.getChildren().clear();
+				makeGridWorld(crittergrid);
+				Critter.displayWorld(crittergrid);
+				Critter.displayWorld();
 
-    public void stopAni(ActionEvent actionEvent) {
-    }
+				Scene scene = new Scene(crittergrid, Params.world_width, Params.world_height);
+				//makeGridWorld(crittergrid);
+				secondStage.setScene(scene);
+				secondStage.show();
+				secondStage.close();
+
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		}
+
+	public void stopAni(ActionEvent actionEvent) {
+	}
 }
