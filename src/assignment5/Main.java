@@ -180,14 +180,18 @@ public class Main extends Application {
 	//WORK ON BELOW. ADD ANIMATION
 	int count = 0;
 	public void startAni(ActionEvent actionEvent) {
+	    int doSteps = Integer.parseInt(numSteps.getText());
 		int numani = Integer.parseInt(numAni.getText());
-		Timeline animation = new Timeline(new KeyFrame(Duration.seconds(1), e->critterstep()));
-		animation.setCycleCount(numani);
+
+		int numDisplayFrame =(doSteps/numani);
+		Timeline animation = new Timeline(new KeyFrame(Duration.seconds(1), e->critterstep(numani)));
+		animation.setCycleCount(numDisplayFrame);
 		animation.play();
 
 		Scene scene = new Scene(rootGrid, 10*Params.world_width, 10*Params.world_height);
 		secondStage.setTitle("Critter Grid");
 		secondStage.setScene(scene);
+		secondStage.resizableProperty();
 		secondStage.show();
 
 		//gridWorld.requestFocus();
@@ -214,8 +218,10 @@ public class Main extends Application {
 		*/
 		}
 
-	public void critterstep(){
-		Critter.worldTimeStep();
+	public void critterstep(int steps){
+		for(int i = 0; i < steps; i ++){
+			Critter.worldTimeStep();
+		}
 		rootGrid.getChildren().clear();
 		makeGridWorld(rootGrid);
 		Critter.displayWorld(rootGrid);
