@@ -53,9 +53,11 @@ public class Main extends Application {
 	// copy paste different cases into main from main lab 4
 	//world
 	private static Pane pane = new StackPane();//stays in middle
+
 	private GridPane crittergrid = new GridPane();//stays in top left
-	static Stage secondStage = new Stage();
-	Scene scene2;
+	private Stage secondStage = new Stage();
+	private Scene scene2;
+
 	//shapes
 	private static Circle circle = new Circle();
 	private static Polygon square = new Polygon();
@@ -97,12 +99,11 @@ public class Main extends Application {
 		primarystage.setTitle("Controls");
 		primarystage.setScene(scene);
 		primarystage.show();
-		scene2 = new Scene(crittergrid,Params.world_width,Params.world_height);
-		//Scene scene2 = new Scene(crittergrid,Params.world_width,Params.world_height);
-		secondStage.setTitle("Critter Grid");
-		makeGridWorld(crittergrid);
-		secondStage.setScene(scene2);
-		secondStage.show();
+
+		//makeGridWorld(crittergrid);
+		//scene2 = new Scene(crittergrid,Params.world_width,Params.world_height);
+		//secondStage.setScene(scene2);
+		//secondStage.show();
 		//Need to paint items on grid now.
 
 		System.out.println("start method");
@@ -190,11 +191,12 @@ public class Main extends Application {
 				Critter.displayWorld(crittergrid);
 				Critter.displayWorld();
 
-				Scene scene = new Scene(crittergrid, Params.world_width, Params.world_height);
-				//makeGridWorld(crittergrid);
-				secondStage.setScene(scene);
+				/*
+				scene2 = new Scene(crittergrid, Params.world_width, Params.world_height);
+				secondStage.setScene(scene2);
 				secondStage.show();
 				secondStage.close();
+				*/
 
 			}
 		}
