@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="def37e61-68fa-4439-82a2-62e58893f0fa" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Critters2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/Critters2/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Critters2/assignment5/Critter$CritterShape.class" afterPath="$PROJECT_DIR$/out/production/Critters2/assignment5/Critter$CritterShape.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Critters2/assignment5/Critter$TestCritter.class" afterPath="$PROJECT_DIR$/out/production/Critters2/assignment5/Critter$TestCritter.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Critters2/assignment5/Critter.class" afterPath="$PROJECT_DIR$/out/production/Critters2/assignment5/Critter.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Critters2/assignment5/Main.class" afterPath="$PROJECT_DIR$/out/production/Critters2/assignment5/Main.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Critters2/assignment5/Params.class" afterPath="$PROJECT_DIR$/out/production/Critters2/assignment5/Params.class" />
-      <change beforePath="$PROJECT_DIR$/src/assignment5/Critter.java" afterPath="$PROJECT_DIR$/src/assignment5/Critter.java" />
-      <change beforePath="$PROJECT_DIR$/src/assignment5/Main.java" afterPath="$PROJECT_DIR$/src/assignment5/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/example code/" />
@@ -131,6 +123,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Hassan Chughtai &lt;hassanchughtai@utexas.edu&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -350,6 +347,14 @@
       <option name="presentableId" value="Default" />
       <updated>1522731116321</updated>
     </task>
+    <task id="LOCAL-00001" summary="Error remakegrid during animation">
+      <created>1522910644557</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1522910644557</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -418,7 +423,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Error remakegrid during animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Error remakegrid during animation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
