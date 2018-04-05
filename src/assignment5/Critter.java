@@ -1,11 +1,13 @@
 package assignment5;
 
+import javafx.scene.Node;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
+import javafx.geometry.Pos;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
@@ -576,10 +578,14 @@ public abstract class Critter {
 	//NEED TO DO DISPLAYWORLD
 	public static void displayWorld(GridPane grid) {
 		for(Critter a: population){
+			int width = Params.world_width;
+			int height = Params.world_height;
+
+
 			if(a.isAlive){
 				 CritterShape shape = a.viewShape();
 				 int i=CritterShape.valueOf(shape.toString()).ordinal();
-				 Shape s;
+				Shape s;
 				//CIRCLE,
 				//SQUARE,
 				//TRIANGLE,
@@ -596,19 +602,52 @@ public abstract class Critter {
 					 	s.setStroke(a.viewOutlineColor());
 					 	grid.add(s,a.x_coord,a.y_coord);
 					 	break;
-					 	default:
+					 case(2):
+					 	Polygon p = new Polygon();
+						p.getPoints().addAll(new Double[]{
+								0.0,0.0,
+								5.0,10.0,
+								0.0,10.0}
+						);
+						p.setStroke(a.viewOutlineColor());
+						grid.add(p,a.x_coord,a.y_coord);
+						break;
+					 case(3):
+						Polygon d = new Polygon();
+						 d.getPoints().addAll(new Double[]{
+								 0.0,5.0,
+								 5.0,10.0,
+								 10.0,5.0,
+								 5.0,10.0}
+						 );
+						 d.setStroke(a.viewOutlineColor());
+						 grid.add(d,a.x_coord,a.y_coord);
+						 break;
+					 case(4):
+						 Polygon star = new Polygon();
+						 star.getPoints().addAll(new Double[]{
+								 0.0,0.0,
+
+								 5.0,10.0,
+								 10.0,5.0,
+								 5.0,10.0}
+						 );
+						 star.setStroke(a.viewOutlineColor());
+						 grid.add(star,a.x_coord,a.y_coord);
+						 break;
+					 default:
 					 		s=new Rectangle(5,5);
 					 		s.setFill(Color.RED);
 					 		grid.add(s,a.x_coord,a.y_coord);
+
 				 }
 
 
 
 				}
-				//Shape s = new Rectangle(5,5);
-				//s.setFill(Color.RED);
 
 			}
+
 	}
 
 	//Alternate displayWorld, where you use Main.<pane> to reach into your

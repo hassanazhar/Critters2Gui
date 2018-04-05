@@ -39,11 +39,6 @@ import java.net.URISyntaxException;
 import java.util.*;
 import java.io.*;
 
-import assignment5.Critter.CritterShape;
-import sun.awt.image.ImageWatched;
-
-import javax.swing.*;
-import javax.xml.soap.Text;
 
 import javafx.util.Duration;
 
@@ -161,6 +156,7 @@ public class Main extends Application {
 	}
 
 	public  void makeGridWorld(GridPane grid){
+		grid.setAlignment(Pos.CENTER);
 		for(int r=0;r<Params.world_width;r++){
 			for(int c = 0; c<Params.world_height; c++){
 				// Explicit Fix
@@ -186,40 +182,9 @@ public class Main extends Application {
 			int doSteps = Integer.parseInt(numSteps.getText());
 			int numani = Integer.parseInt(numAni.getText());
 			animate(doSteps,numani, work);
-			/*int numDisplayFrame = (doSteps / numani);
-			Timeline animation = new Timeline(new KeyFrame(Duration.seconds(1), e -> critterstep(numani)));
-			animation.setCycleCount(numDisplayFrame);
-			animation.play();
-
-			Scene scene = new Scene(rootGrid, 10 * Params.world_width, 10 * Params.world_height);
-			secondStage.setTitle("Critter Grid");
-			secondStage.setScene(scene);
-			secondStage.resizableProperty();
-			secondStage.show();*/
-
-			//gridWorld.requestFocus();
-		/*
-		try {
-			int numani = Integer.parseInt(numAni.getText());
-			for (int i = 0; i < numani; i++) {
-				GridPane rootGrid = new GridPane();
-				Critter.worldTimeStep();
-				rootGrid.getChildren().clear();
-				makeGridWorld(rootGrid);
-				Critter.displayWorld(rootGrid);
-				Critter.displayWorld();
-
-				PathTransition pt = new PathTransition();
-				pt.setDuration(Duration.millis(10000));
-
-			}
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-
-		*/
 	}
+	private Timeline animation;
+
 	public void animate(int steps, int numAni, boolean work) {
 		if(work) {
 			int steps1 = 0;
@@ -231,9 +196,10 @@ public class Main extends Application {
 				numAni1 = numAni;
 			}
 			int numDisplayFrame = (steps1 / numAni1);
-			Timeline animation = new Timeline(new KeyFrame(Duration.seconds(1), e -> critterstep(numDisplayFrame)));
+			animation = new Timeline(new KeyFrame(Duration.seconds(1), e -> critterstep(numDisplayFrame)));
 			animation.setCycleCount(numDisplayFrame);
 			animation.play();
+
 
 			Scene scene = new Scene(rootGrid, 10 * Params.world_width, 10 * Params.world_height);
 			secondStage.setTitle("Critter Grid");
@@ -242,6 +208,7 @@ public class Main extends Application {
 			secondStage.show();
 
 		}
+
 
 	}
 	public void critterstep(int steps){
@@ -258,10 +225,8 @@ public class Main extends Application {
 
 
 
+
 	public void stopAni(ActionEvent actionEvent) {
-		work =false;
-
-
-
+			animation.stop();
 	}
 }
