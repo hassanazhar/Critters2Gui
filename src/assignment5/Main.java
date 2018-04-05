@@ -74,11 +74,14 @@ public class Main extends Application {
 	private ComboBox selectbox;
 	public void initialize(){
 		selectbox.getItems().addAll(
-				"Algae","Ali","Tank","Boss","BigBoss","Craig","TragicCritter"
+				"Algae","Tank","Boss","BigBoss","Craig","TragicCritter"
 		);
 	}
 	@FXML
 	private TextField numAni;
+	@FXML
+	private TextField reflectionCritter;
+
 
 	@Override
 	public void start(Stage primarystage){
@@ -180,46 +183,27 @@ public class Main extends Application {
 	//WORK ON BELOW. ADD ANIMATION
 	int count = 0;
 	boolean work=true;
+	public void reflection(ActionEvent actionEvent) throws InvalidCritterException {
+		String s = reflectionCritter.getText();
+		System.out.println(s);
+		try {
+			Critter.makeCritter(s);
+			selectbox.getItems().add(s);
+
+		}
+		catch(InvalidCritterException e){
+			e.printStackTrace();
+		}
+
+	}
 	public void startAni(ActionEvent actionEvent) {
 		//work =true;
 
 			int doSteps = Integer.parseInt(numSteps.getText());
 			int numani = Integer.parseInt(numAni.getText());
 			animate(doSteps,numani, work);
-			/*int numDisplayFrame = (doSteps / numani);
-			Timeline animation = new Timeline(new KeyFrame(Duration.seconds(1), e -> critterstep(numani)));
-			animation.setCycleCount(numDisplayFrame);
-			animation.play();
-
-			Scene scene = new Scene(rootGrid, 10 * Params.world_width, 10 * Params.world_height);
-			secondStage.setTitle("Critter Grid");
-			secondStage.setScene(scene);
-			secondStage.resizableProperty();
-			secondStage.show();*/
-
-			//gridWorld.requestFocus();
-		/*
-		try {
-			int numani = Integer.parseInt(numAni.getText());
-			for (int i = 0; i < numani; i++) {
-				GridPane rootGrid = new GridPane();
-				Critter.worldTimeStep();
-				rootGrid.getChildren().clear();
-				makeGridWorld(rootGrid);
-				Critter.displayWorld(rootGrid);
-				Critter.displayWorld();
-
-				PathTransition pt = new PathTransition();
-				pt.setDuration(Duration.millis(10000));
-
-			}
-		}
-		catch(Exception e) {
-			e.printStackTrace();
-		}
-
-		*/
 	}
+	private Timeline animation;
 	public void animate(int steps, int numAni, boolean work) {
 		if(work) {
 			int steps1 = 0;
@@ -231,7 +215,7 @@ public class Main extends Application {
 				numAni1 = numAni;
 			}
 			int numDisplayFrame = (steps1 / numAni1);
-			Timeline animation = new Timeline(new KeyFrame(Duration.seconds(1), e -> critterstep(numDisplayFrame)));
+			animation = new Timeline(new KeyFrame(Duration.seconds(1), e -> critterstep(numDisplayFrame)));
 			animation.setCycleCount(numDisplayFrame);
 			animation.play();
 
@@ -255,13 +239,7 @@ public class Main extends Application {
 		count = count + 1;
 		System.out.println("This is run: " + count);
 	}
-
-
-
 	public void stopAni(ActionEvent actionEvent) {
-		work =false;
-
-
-
+		animation.stop();
 	}
 }

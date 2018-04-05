@@ -9,16 +9,18 @@
     <children>
         <ComboBox fx:id="selectbox" layoutX="203.0" layoutY="32.0" prefWidth="150.0" promptText="Critter Type" />
         <Button fx:id="makebtn" layoutX="374.0" layoutY="32.0" mnemonicParsing="false" onAction="#numCritter" text="Make Critter(s)" />
-        <Button fx:id="stepbtn" layoutX="203.0" layoutY="92.0" mnemonicParsing="false" onAction="#numTimeSteps" text="Execute Timestep(s)" />
-        <TextField fx:id="numSteps" layoutX="38.0" layoutY="92.0" promptText="Enter number of Timesteps" />
-        <TextField fx:id="seedValue" layoutX="38.0" layoutY="152.0" promptText="Enter seed value" />
-        <Button fx:id="seedbtn" layoutX="222.0" layoutY="152.0" mnemonicParsing="false" text="Seed" />
-        <Button fx:id="showbtn" layoutX="41.0" layoutY="206.0" mnemonicParsing="false" onAction="#showWorld" text="Display World" />
-        <Button fx:id="statsbtn" layoutX="41.0" layoutY="250.0" mnemonicParsing="false" onAction="#stats" text="Display Statistics" />
+        <Button fx:id="stepbtn" layoutX="205.0" layoutY="141.0" mnemonicParsing="false" onAction="#numTimeSteps" text="Execute Timestep(s)" />
+        <TextField fx:id="numSteps" layoutX="35.0" layoutY="141.0" promptText="Enter number of Timesteps" />
+        <TextField fx:id="seedValue" layoutX="35.0" layoutY="186.0" promptText="Enter seed value" />
+        <Button fx:id="seedbtn" layoutX="223.0" layoutY="186.0" mnemonicParsing="false" text="Seed" />
+        <Button fx:id="showbtn" layoutX="35.0" layoutY="229.0" mnemonicParsing="false" onAction="#showWorld" text="Display World" />
+        <Button fx:id="statsbtn" layoutX="35.0" layoutY="275.0" mnemonicParsing="false" onAction="#stats" text="Display Statistics" />
         <Button fx:id="endbtn" layoutX="39.0" layoutY="393.0" mnemonicParsing="false" onAction="#end" text="Exit Simulation" />
         <TextField fx:id="numCritters" layoutX="38.0" layoutY="32.0" promptText="Enter Amt of Critters" />
-        <Button fx:id="anibtn" layoutX="229.0" layoutY="306.0" mnemonicParsing="false" onAction="#startAni" text="Start Animation" />
-        <TextField fx:id="numAni" layoutX="38.0" layoutY="306.0" promptText="Enter desired animation tps" />
-        <Button fx:id="stopani" layoutX="372.0" layoutY="306.0" mnemonicParsing="false" onAction="#stopAni" text="Stop Animation" />
+        <Button fx:id="anibtn" layoutX="229.0" layoutY="331.0" mnemonicParsing="false" onAction="#startAni" text="Start Animation" />
+        <TextField fx:id="numAni" layoutX="38.0" layoutY="331.0" promptText="Enter desired animation tps" />
+        <Button fx:id="stopani" layoutX="372.0" layoutY="331.0" mnemonicParsing="false" onAction="#stopAni" text="Stop Animation" />
+      <TextField fx:id="reflectionCritter" layoutX="35.0" layoutY="80.0" promptText="NEW CRITTER TYPE" />
+      <Button fx:id="reflectionCritterbtn" layoutX="218.0" layoutY="80.0" mnemonicParsing="false" onAction="#reflection" text="Make New Critter" />
     </children>
 </AnchorPane>
