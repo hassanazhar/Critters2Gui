@@ -88,7 +88,58 @@ public abstract class Critter {
 		myPackage = Critter.class.getPackage().toString().split(" ")[1];
 	}
 
-	protected final String look(int direction, boolean steps) {return "";}
+	protected final String look(int direction, boolean steps) {
+		this.energy = getEnergy()-Params.look_energy_cost;
+		int step = 1;
+		if(!steps){
+			step = 1;
+		}else {
+			step = 2;
+		}
+		int x = this.x_coord;
+		int y = this.y_coord;
+		int xCheck = x;
+		int yCheck = y;
+		switch(direction){
+			case (0)://E
+				xCheck=torus2x(step,x);
+				break;
+			case(1)://NE
+				xCheck=torus2x(step,x);
+				yCheck=torus2y(step,y);
+				break;
+			case(2)://N
+				yCheck=torus2y(step,y);
+				break;
+			case(3)://NW
+				xCheck=torus2x(step,x);
+				yCheck=torus2y(step,y);
+				break;
+			case(4)://W
+				xCheck=torus2x(step,x);
+				break;
+			case(5)://SW
+				xCheck=torus2x(step,x);
+				yCheck=torus2y(step,y);
+				break;
+			case(6)://S
+				yCheck=torus2y(step,y);
+				break;
+			case(7)://SE
+				xCheck=torus2x(step,x);
+				yCheck=torus2y(step,y);
+				break;
+		}
+
+		if(map[xCheck][yCheck]>=1){
+			for(Critter a : population){
+				if(a.x_coord==xCheck && a.y_coord==yCheck){
+					return a.toString();
+				}
+			}
+		}else return null;
+		return null;
+	}
 
 	/* rest is unchanged from Project 4 */
 
@@ -497,11 +548,11 @@ public abstract class Critter {
 			}
 		}
 	}
+
 	private static void mapCheck(){
 		for(int x = 0; x < Params.world_width; x = x + 1){
-			for(int y = 0; y < Params.world_height; y = y + 1){
-				if(map[x][y] > 1){
-					//System.out.println("Encounter Missing. Position: (" + x + "," + y + ").");
+			for(int y = 0; y < Params.world_height; y = y + 1) {
+				if (map[x][y] == 1) {
 				}
 			}
 		}
