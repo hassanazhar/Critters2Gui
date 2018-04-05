@@ -181,7 +181,7 @@ public class Main extends Application {
 	int count = 0;
 	boolean work=true;
 	public void startAni(ActionEvent actionEvent) {
-		work =true;
+		//work =true;
 
 			int doSteps = Integer.parseInt(numSteps.getText());
 			int numani = Integer.parseInt(numAni.getText());
