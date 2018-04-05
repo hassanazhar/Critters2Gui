@@ -74,7 +74,7 @@ public class Main extends Application {
 	private ComboBox selectbox;
 	public void initialize(){
 		selectbox.getItems().addAll(
-				"Algae","Ali","Tank","Boss","BigBoss","Craig"
+				"Algae","Ali","Tank","Boss","BigBoss","Craig","TragicCritter"
 		);
 	}
 	@FXML
@@ -179,22 +179,25 @@ public class Main extends Application {
 	}
 	//WORK ON BELOW. ADD ANIMATION
 	int count = 0;
+	boolean work=true;
 	public void startAni(ActionEvent actionEvent) {
-	    int doSteps = Integer.parseInt(numSteps.getText());
-		int numani = Integer.parseInt(numAni.getText());
+		//work =true;
 
-		int numDisplayFrame =(doSteps/numani);
-		Timeline animation = new Timeline(new KeyFrame(Duration.seconds(1), e->critterstep(numani)));
-		animation.setCycleCount(numDisplayFrame);
-		animation.play();
+			int doSteps = Integer.parseInt(numSteps.getText());
+			int numani = Integer.parseInt(numAni.getText());
+			animate(doSteps,numani, work);
+			/*int numDisplayFrame = (doSteps / numani);
+			Timeline animation = new Timeline(new KeyFrame(Duration.seconds(1), e -> critterstep(numani)));
+			animation.setCycleCount(numDisplayFrame);
+			animation.play();
 
-		Scene scene = new Scene(rootGrid, 10*Params.world_width, 10*Params.world_height);
-		secondStage.setTitle("Critter Grid");
-		secondStage.setScene(scene);
-		secondStage.resizableProperty();
-		secondStage.show();
+			Scene scene = new Scene(rootGrid, 10 * Params.world_width, 10 * Params.world_height);
+			secondStage.setTitle("Critter Grid");
+			secondStage.setScene(scene);
+			secondStage.resizableProperty();
+			secondStage.show();*/
 
-		//gridWorld.requestFocus();
+			//gridWorld.requestFocus();
 		/*
 		try {
 			int numani = Integer.parseInt(numAni.getText());
@@ -216,8 +219,31 @@ public class Main extends Application {
 		}
 
 		*/
+	}
+	public void animate(int steps, int numAni, boolean work) {
+		if(work) {
+			int steps1 = 0;
+			int numAni1 = 0;
+			if (steps > 0) {
+				steps1 = steps;
+			}
+			if (numAni > 0) {
+				numAni1 = numAni;
+			}
+			int numDisplayFrame = (steps1 / numAni1);
+			Timeline animation = new Timeline(new KeyFrame(Duration.seconds(1), e -> critterstep(numDisplayFrame)));
+			animation.setCycleCount(numDisplayFrame);
+			animation.play();
+
+			Scene scene = new Scene(rootGrid, 10 * Params.world_width, 10 * Params.world_height);
+			secondStage.setTitle("Critter Grid");
+			secondStage.setScene(scene);
+			secondStage.resizableProperty();
+			secondStage.show();
+
 		}
 
+	}
 	public void critterstep(int steps){
 		for(int i = 0; i < steps; i ++){
 			Critter.worldTimeStep();
@@ -233,5 +259,9 @@ public class Main extends Application {
 
 
 	public void stopAni(ActionEvent actionEvent) {
+		work =false;
+
+
+
 	}
 }

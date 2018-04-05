@@ -2,6 +2,8 @@ package assignment5;
 
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 
@@ -10,6 +12,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+
+import static assignment5.Critter.CritterShape.CIRCLE;
+import static assignment5.Critter.CritterShape.SQUARE;
 
 public abstract class Critter {
 	/* NEW FOR PROJECT 5 */
@@ -45,7 +50,7 @@ public abstract class Critter {
 	private	static List<Critter> population = new java.util.ArrayList<Critter>();
 	private static List<Critter> babies = new java.util.ArrayList<Critter>();
 	private static int[][] map = new int[Params.world_width][Params.world_height];
-	private static String [] realCritters = {"assignment5.Algae","assignment5.Craig","assignment5.Boss",
+	private static String [] realCritters = {"assignment5.Algae","assignment5.TragicCritter","assignment5.Craig","assignment5.Boss",
 			"assignment5.Ali", "assignment5.Tank","assignment5.BigBoss"};
 	private final int torusx(int moves, int xcoord){
 		if ((xcoord+moves)>(Params.world_width-1)){
@@ -137,7 +142,7 @@ public abstract class Critter {
 					return a.toString();
 				}
 			}
-		}else return null;
+		}
 		return null;
 	}
 
@@ -572,13 +577,40 @@ public abstract class Critter {
 	public static void displayWorld(GridPane grid) {
 		for(Critter a: population){
 			if(a.isAlive){
-				Shape s = new Rectangle(5,5);
-				s.setFill(Color.RED);
-				grid.add(s,a.x_coord,a.y_coord);
-			}
-		}
+				 CritterShape shape = a.viewShape();
+				 int i=CritterShape.valueOf(shape.toString()).ordinal();
+				 Shape s;
+				//CIRCLE,
+				//SQUARE,
+				//TRIANGLE,
+				//DIAMOND,
+				//STAR
+				 switch(i){
+					 case(0):
+					 	s = new Circle(5/2);
+					 	s.setStroke(a.viewOutlineColor());
+					 	grid.add(s,a.x_coord,a.y_coord);
+					 	break;
+					 case(1):
+					 	s=new Rectangle(5,5);
+					 	s.setStroke(a.viewOutlineColor());
+					 	grid.add(s,a.x_coord,a.y_coord);
+					 	break;
+					 	default:
+					 		s=new Rectangle(5,5);
+					 		s.setFill(Color.RED);
+					 		grid.add(s,a.x_coord,a.y_coord);
+				 }
 
+
+
+				}
+				//Shape s = new Rectangle(5,5);
+				//s.setFill(Color.RED);
+
+			}
 	}
+
 	//Alternate displayWorld, where you use Main.<pane> to reach into your
 	//display component.
 	//NEED TO MAKE THIS APPEAR IN GRID ON FX
