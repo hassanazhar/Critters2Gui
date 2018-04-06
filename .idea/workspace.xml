@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1ad0504-fcea-4cd3-ace2-370b2a995f40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Critters2/assignment5/Critter$CritterShape.class" afterPath="$PROJECT_DIR$/out/production/Critters2/assignment5/Critter$CritterShape.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Critters2/assignment5/Critter$TestCritter.class" afterPath="$PROJECT_DIR$/out/production/Critters2/assignment5/Critter$TestCritter.class" />
+    <list default="true" id="e1ad0504-fcea-4cd3-ace2-370b2a995f40" name="Default" comment="attempt changing stats gui">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Critters2/assignment5/Craig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Critters2/assignment5/Main.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Critters2/assignment5/Critter.class" afterPath="$PROJECT_DIR$/out/production/Critters2/assignment5/Critter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Critters2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/Critters2/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment5/Craig.java" afterPath="$PROJECT_DIR$/src/assignment5/Craig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment5/Critter.java" afterPath="$PROJECT_DIR$/src/assignment5/Critter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment5/Main.java" afterPath="$PROJECT_DIR$/src/assignment5/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/example code/" />
@@ -22,77 +24,113 @@
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assignment5/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="872">
-              <caret line="146" column="89" lean-forward="false" selection-start-line="146" selection-start-column="89" selection-end-line="146" selection-end-column="89" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TragicCritter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assignment5/TragicCritter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Critter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assignment5/Critter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="616" column="12" lean-forward="true" selection-start-line="616" selection-start-column="12" selection-end-line="616" selection-end-column="12" />
-              <folding>
-                <marker date="1522973669724" expanded="false" signature="2784:2788" ph=" { " />
-                <marker date="1522973669724" expanded="false" signature="2805:2808" ph=" }" />
-                <marker date="1522973669724" expanded="false" signature="2850:2854" ph=" { " />
-                <marker date="1522973669724" expanded="false" signature="2871:2874" ph=" }" />
-                <marker date="1522973669724" expanded="false" signature="4217:4222" ph=" { " />
-                <marker date="1522973669724" expanded="false" signature="4247:4250" ph=" }" />
-                <marker date="1522973669724" expanded="false" signature="4294:4299" ph=" { " />
-                <marker date="1522973669724" expanded="false" signature="4337:4340" ph=" }" />
-                <marker date="1522973669724" expanded="false" signature="18446:18455" ph="&lt;~&gt;" />
-                <marker date="1522973669724" expanded="false" signature="18945:18962" ph="&lt;~&gt;" />
-                <marker date="1522973669724" expanded="false" signature="20132:20138" ph=" { " />
-                <marker date="1522973669724" expanded="false" signature="20170:20174" ph=" }" />
-                <marker date="1522973669724" expanded="false" signature="20220:20226" ph=" { " />
-                <marker date="1522973669724" expanded="false" signature="20254:20258" ph=" }" />
-                <marker date="1522973669724" expanded="false" signature="20304:20310" ph=" { " />
-                <marker date="1522973669724" expanded="false" signature="20338:20342" ph=" }" />
-                <marker date="1522973669724" expanded="false" signature="20372:20378" ph=" { " />
-                <marker date="1522973669724" expanded="false" signature="20399:20403" ph=" }" />
-                <marker date="1522973669724" expanded="false" signature="20433:20439" ph=" { " />
-                <marker date="1522973669724" expanded="false" signature="20460:20464" ph=" }" />
-                <marker date="1522973669724" expanded="false" signature="20749:20755" ph=" { " />
-                <marker date="1522973669724" expanded="false" signature="20773:20777" ph=" }" />
-                <marker date="1522973669724" expanded="false" signature="21158:21164" ph=" { " />
-                <marker date="1522973669724" expanded="false" signature="21178:21182" ph=" }" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlgaephobicCritter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/assignment5/AlgaephobicCritter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-46">
-              <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="assignment5.fxml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/assignment5/assignment5.fxml">
+              <provider editor-type-id="JavaFX-Scene-Builder">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Critter.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/assignment5/Critter.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="245">
+                  <caret line="799" column="0" lean-forward="true" selection-start-line="799" selection-start-column="0" selection-end-line="799" selection-end-column="0" />
+                  <folding>
+                    <element signature="class#CritterShape#0;class#Critter#0" expanded="false" />
+                    <element signature="method#torusx#0;class#Critter#0" expanded="false" />
+                    <element signature="method#torusy#0;class#Critter#0" expanded="false" />
+                    <element signature="initializer##0;class#Critter#0" expanded="false" />
+                    <element signature="method#look#0;class#Critter#0" expanded="false" />
+                    <element signature="method#walk#0;class#Critter#0" expanded="false" />
+                    <element signature="method#run#0;class#Critter#0" expanded="false" />
+                    <element signature="method#reproduce#0;class#Critter#0" expanded="false" />
+                    <element signature="method#worldTimeStep#0;class#Critter#0" expanded="false" />
+                    <element signature="method#rollDice#0;class#Critter#0" expanded="false" />
+                    <element signature="method#canMove#0;class#Critter#0" expanded="false" />
+                    <element signature="method#torus2x#0;class#Critter#0" expanded="false" />
+                    <element signature="method#torus2y#0;class#Critter#0" expanded="false" />
+                    <element signature="method#runAway#0;class#Critter#0" expanded="false" />
+                    <element signature="method#sameLocation#0;class#Critter#0" expanded="false" />
+                    <element signature="method#encounters2#0;class#Critter#0" expanded="false" />
+                    <element signature="method#mapCheck#0;class#Critter#0" expanded="false" />
+                    <element signature="method#getalivecritters#0;class#Critter#0" expanded="false" />
+                    <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
+                    <element signature="method#displayWorld#1;class#Critter#0" expanded="false" />
+                    <element signature="method#makeCritter#0;class#Critter#0" expanded="false" />
+                    <element signature="method#getInstances#0;class#Critter#0" expanded="false" />
+                    <element signature="class#TestCritter#0;class#Critter#0" expanded="false" />
+                    <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
+                    <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/assignment5/Main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="504">
+                  <caret line="172" column="34" lean-forward="true" selection-start-line="172" selection-start-column="34" selection-end-line="172" selection-end-column="34" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Craig.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/assignment5/Craig.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="675">
+                  <caret line="71" column="6" lean-forward="false" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Algae.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/assignment5/Algae.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AlgaephobicCritter.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/assignment5/AlgaephobicCritter.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>look</find>
+      <find>stats</find>
+      <find>runstats</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -116,6 +154,8 @@
         <option value="$PROJECT_DIR$/src/assignment5/Tank.java" />
         <option value="$PROJECT_DIR$/src/assignment5/BigBoss.java" />
         <option value="$PROJECT_DIR$/src/assignment5/Critter.java" />
+        <option value="$PROJECT_DIR$/src/assignment5/Craig.java" />
+        <option value="$PROJECT_DIR$/src/assignment5/Main.java" />
       </list>
     </option>
   </component>
@@ -125,10 +165,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="725" />
-    <option name="height" value="687" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1559" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -441,14 +481,35 @@
       <option name="project" value="LOCAL" />
       <updated>1522972540652</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Testing Shapes">
+      <created>1522973747765</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1522973747766</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Shapes">
+      <created>1522974795714</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1522974795714</updated>
+    </task>
+    <task id="LOCAL-00004" summary="attempt changing stats gui">
+      <created>1522979358027</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1522979358028</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224000" />
+    <option name="totallyTimeSpent" value="5976000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1677" height="1027" extended-state="6" />
+    <frame x="0" y="23" width="1559" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -464,7 +525,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1883792" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2030323" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -480,16 +541,51 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.333691" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2030323" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Done reflection. Need shapes. Need to put output to gui" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done reflection. Need shapes. Need to put output to gui" />
+    <MESSAGE value="Testing Shapes" />
+    <MESSAGE value="Shapes" />
+    <MESSAGE value="attempt changing stats gui" />
+    <option name="LAST_COMMIT_MESSAGE" value="attempt changing stats gui" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -497,7 +593,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -506,30 +604,31 @@
         <state relative-caret-position="1155">
           <caret line="99" column="21" lean-forward="true" selection-start-line="99" selection-start-column="21" selection-end-line="99" selection-end-column="21" />
           <folding>
-            <marker date="1522973669724" expanded="false" signature="2784:2788" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="2805:2808" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="2850:2854" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="2871:2874" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="4217:4222" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="4247:4250" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="4294:4299" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="4337:4340" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="18446:18455" ph="&lt;~&gt;" />
-            <marker date="1522973669724" expanded="false" signature="18945:18962" ph="&lt;~&gt;" />
-            <marker date="1522973669724" expanded="false" signature="20132:20138" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20170:20174" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="20220:20226" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20254:20258" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="20304:20310" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20338:20342" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="20372:20378" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20399:20403" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="20433:20439" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20460:20464" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="20749:20755" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20773:20777" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="21158:21164" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="21178:21182" ph=" }" />
+            <element signature="class#CritterShape#0;class#Critter#0" expanded="false" />
+            <element signature="method#torusx#0;class#Critter#0" expanded="false" />
+            <element signature="method#torusy#0;class#Critter#0" expanded="false" />
+            <element signature="initializer##0;class#Critter#0" expanded="false" />
+            <element signature="method#look#0;class#Critter#0" expanded="false" />
+            <element signature="method#walk#0;class#Critter#0" expanded="false" />
+            <element signature="method#run#0;class#Critter#0" expanded="false" />
+            <element signature="method#reproduce#0;class#Critter#0" expanded="false" />
+            <element signature="method#worldTimeStep#0;class#Critter#0" expanded="false" />
+            <element signature="method#rollDice#0;class#Critter#0" expanded="false" />
+            <element signature="method#canMove#0;class#Critter#0" expanded="false" />
+            <element signature="method#torus2x#0;class#Critter#0" expanded="false" />
+            <element signature="method#torus2y#0;class#Critter#0" expanded="false" />
+            <element signature="method#runAway#0;class#Critter#0" expanded="false" />
+            <element signature="method#sameLocation#0;class#Critter#0" expanded="false" />
+            <element signature="method#encounters2#0;class#Critter#0" expanded="false" />
+            <element signature="method#mapCheck#0;class#Critter#0" expanded="false" />
+            <element signature="method#getalivecritters#0;class#Critter#0" expanded="false" />
+            <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#displayWorld#1;class#Critter#0" expanded="false" />
+            <element signature="method#makeCritter#0;class#Critter#0" expanded="false" />
+            <element signature="method#getInstances#0;class#Critter#0" expanded="false" />
+            <element signature="class#TestCritter#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -550,7 +649,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-810">
           <caret line="74" column="15" lean-forward="false" selection-start-line="74" selection-start-column="15" selection-end-line="74" selection-end-column="15" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -559,30 +660,31 @@
         <state relative-caret-position="-689">
           <caret line="575" column="4" lean-forward="false" selection-start-line="575" selection-start-column="4" selection-end-line="575" selection-end-column="4" />
           <folding>
-            <marker date="1522973669724" expanded="false" signature="2784:2788" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="2805:2808" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="2850:2854" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="2871:2874" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="4217:4222" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="4247:4250" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="4294:4299" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="4337:4340" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="18446:18455" ph="&lt;~&gt;" />
-            <marker date="1522973669724" expanded="false" signature="18945:18962" ph="&lt;~&gt;" />
-            <marker date="1522973669724" expanded="false" signature="20132:20138" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20170:20174" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="20220:20226" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20254:20258" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="20304:20310" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20338:20342" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="20372:20378" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20399:20403" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="20433:20439" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20460:20464" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="20749:20755" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20773:20777" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="21158:21164" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="21178:21182" ph=" }" />
+            <element signature="class#CritterShape#0;class#Critter#0" expanded="false" />
+            <element signature="method#torusx#0;class#Critter#0" expanded="false" />
+            <element signature="method#torusy#0;class#Critter#0" expanded="false" />
+            <element signature="initializer##0;class#Critter#0" expanded="false" />
+            <element signature="method#look#0;class#Critter#0" expanded="false" />
+            <element signature="method#walk#0;class#Critter#0" expanded="false" />
+            <element signature="method#run#0;class#Critter#0" expanded="false" />
+            <element signature="method#reproduce#0;class#Critter#0" expanded="false" />
+            <element signature="method#worldTimeStep#0;class#Critter#0" expanded="false" />
+            <element signature="method#rollDice#0;class#Critter#0" expanded="false" />
+            <element signature="method#canMove#0;class#Critter#0" expanded="false" />
+            <element signature="method#torus2x#0;class#Critter#0" expanded="false" />
+            <element signature="method#torus2y#0;class#Critter#0" expanded="false" />
+            <element signature="method#runAway#0;class#Critter#0" expanded="false" />
+            <element signature="method#sameLocation#0;class#Critter#0" expanded="false" />
+            <element signature="method#encounters2#0;class#Critter#0" expanded="false" />
+            <element signature="method#mapCheck#0;class#Critter#0" expanded="false" />
+            <element signature="method#getalivecritters#0;class#Critter#0" expanded="false" />
+            <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#displayWorld#1;class#Critter#0" expanded="false" />
+            <element signature="method#makeCritter#0;class#Critter#0" expanded="false" />
+            <element signature="method#getInstances#0;class#Critter#0" expanded="false" />
+            <element signature="class#TestCritter#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -590,61 +692,102 @@
     <entry file="file://$PROJECT_DIR$/src/assignment5/Boss.java" />
     <entry file="file://$PROJECT_DIR$/src/assignment5/Ali.java" />
     <entry file="file://$PROJECT_DIR$/src/assignment5/BigBoss.java" />
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Tank.java" />
+    <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/assignment5.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="36" lean-forward="false" selection-start-line="0" selection-start-column="36" selection-end-line="0" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment5/TragicCritter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
+        <state relative-caret-position="450">
           <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment5/Tank.java" />
-    <entry file="file://$PROJECT_DIR$/src/assignment5/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Algae.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="872">
-          <caret line="146" column="89" lean-forward="false" selection-start-line="146" selection-start-column="89" selection-end-line="146" selection-end-column="89" />
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/AlgaephobicCritter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Craig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="71" column="6" lean-forward="false" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment5/Critter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="616" column="12" lean-forward="true" selection-start-line="616" selection-start-column="12" selection-end-line="616" selection-end-column="12" />
+        <state relative-caret-position="245">
+          <caret line="799" column="0" lean-forward="true" selection-start-line="799" selection-start-column="0" selection-end-line="799" selection-end-column="0" />
           <folding>
-            <marker date="1522973669724" expanded="false" signature="2784:2788" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="2805:2808" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="2850:2854" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="2871:2874" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="4217:4222" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="4247:4250" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="4294:4299" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="4337:4340" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="18446:18455" ph="&lt;~&gt;" />
-            <marker date="1522973669724" expanded="false" signature="18945:18962" ph="&lt;~&gt;" />
-            <marker date="1522973669724" expanded="false" signature="20132:20138" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20170:20174" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="20220:20226" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20254:20258" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="20304:20310" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20338:20342" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="20372:20378" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20399:20403" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="20433:20439" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20460:20464" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="20749:20755" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="20773:20777" ph=" }" />
-            <marker date="1522973669724" expanded="false" signature="21158:21164" ph=" { " />
-            <marker date="1522973669724" expanded="false" signature="21178:21182" ph=" }" />
+            <element signature="class#CritterShape#0;class#Critter#0" expanded="false" />
+            <element signature="method#torusx#0;class#Critter#0" expanded="false" />
+            <element signature="method#torusy#0;class#Critter#0" expanded="false" />
+            <element signature="initializer##0;class#Critter#0" expanded="false" />
+            <element signature="method#look#0;class#Critter#0" expanded="false" />
+            <element signature="method#walk#0;class#Critter#0" expanded="false" />
+            <element signature="method#run#0;class#Critter#0" expanded="false" />
+            <element signature="method#reproduce#0;class#Critter#0" expanded="false" />
+            <element signature="method#worldTimeStep#0;class#Critter#0" expanded="false" />
+            <element signature="method#rollDice#0;class#Critter#0" expanded="false" />
+            <element signature="method#canMove#0;class#Critter#0" expanded="false" />
+            <element signature="method#torus2x#0;class#Critter#0" expanded="false" />
+            <element signature="method#torus2y#0;class#Critter#0" expanded="false" />
+            <element signature="method#runAway#0;class#Critter#0" expanded="false" />
+            <element signature="method#sameLocation#0;class#Critter#0" expanded="false" />
+            <element signature="method#encounters2#0;class#Critter#0" expanded="false" />
+            <element signature="method#mapCheck#0;class#Critter#0" expanded="false" />
+            <element signature="method#getalivecritters#0;class#Critter#0" expanded="false" />
+            <element signature="method#displayWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#displayWorld#1;class#Critter#0" expanded="false" />
+            <element signature="method#makeCritter#0;class#Critter#0" expanded="false" />
+            <element signature="method#getInstances#0;class#Critter#0" expanded="false" />
+            <element signature="class#TestCritter#0;class#Critter#0" expanded="false" />
+            <element signature="docComment;method#clearWorld#0;class#Critter#0" expanded="false" />
+            <element signature="method#clearWorld#0;class#Critter#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment5/AlgaephobicCritter.java">
+    <entry file="file://$PROJECT_DIR$/src/assignment5/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="10" column="36" lean-forward="true" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding />
+        <state relative-caret-position="504">
+          <caret line="172" column="34" lean-forward="true" selection-start-line="172" selection-start-column="34" selection-end-line="172" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

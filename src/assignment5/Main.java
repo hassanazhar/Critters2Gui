@@ -143,15 +143,28 @@ public class Main extends Application {
 	//done
 	public void stats(ActionEvent event) {
 		LinkedList<Critter> new2= Critter.getalivecritters();
-		Critter.runStats(new2);
+		java.util.Map<String, Integer> critter_count = Critter.runStats(new2);
 
-		Text text = new Text();
-		text.setText("Life is Good");
-		text.setX(100);
-		text.setY(100);
-		text.setFont(new Font(90));
+		GridPane pane = new GridPane();
 
-		Pane pane = new Pane(text);
+		for (Critter crit : new2) {
+			String crit_string = crit.toString();
+			Integer old_count = critter_count.get(crit_string);
+			if (old_count == null) {
+				critter_count.put(crit_string,  1);
+			} else {
+				critter_count.put(crit_string, old_count.intValue() + 1);
+			}
+			System.out.println(crit);
+		}
+		Text out;
+		String prefix = "";
+		for (String s : critter_count.keySet()) {
+			out = new Text(prefix + s + ":" + critter_count.get(s));
+			pane.getChildren().add(out);
+			prefix = ", ";
+			System.out.println(out);
+		}
 
 
 		Scene scene = new Scene(pane, 600, 300);

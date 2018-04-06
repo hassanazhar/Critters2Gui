@@ -49,7 +49,7 @@ public class Craig extends Critter {
 		
 		dir = (dir + turn) % 8;
 	}
-
+/*
 	public static void runStats(java.util.List<Critter> craigs) {
 		int total_straight = 0;
 		int total_left = 0;
@@ -69,6 +69,7 @@ public class Craig extends Critter {
 		System.out.print("" + total_left / (GENE_TOTAL * 0.01 * craigs.size()) + "% left   ");
 		System.out.println();
 	}
+	*/
 	
 	@Override
 	public CritterShape viewShape() { return CritterShape.SQUARE; }
