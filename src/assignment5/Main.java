@@ -39,6 +39,11 @@ import java.net.URISyntaxException;
 import java.util.*;
 import java.io.*;
 
+import assignment5.Critter.CritterShape;
+import sun.awt.image.ImageWatched;
+
+import javax.swing.*;
+import javax.xml.soap.Text;
 
 import javafx.util.Duration;
 
@@ -69,11 +74,14 @@ public class Main extends Application {
 	private ComboBox selectbox;
 	public void initialize(){
 		selectbox.getItems().addAll(
-				"Algae","Ali","Tank","Boss","BigBoss","Craig","TragicCritter"
+				"Algae","Tank","Boss","BigBoss","Craig","TragicCritter"
 		);
 	}
 	@FXML
 	private TextField numAni;
+	@FXML
+	private TextField reflectionCritter;
+
 
 	@Override
 	public void start(Stage primarystage){
@@ -156,7 +164,6 @@ public class Main extends Application {
 	}
 
 	public  void makeGridWorld(GridPane grid){
-		grid.setAlignment(Pos.CENTER);
 		for(int r=0;r<Params.world_width;r++){
 			for(int c = 0; c<Params.world_height; c++){
 				// Explicit Fix
@@ -176,6 +183,19 @@ public class Main extends Application {
 	//WORK ON BELOW. ADD ANIMATION
 	int count = 0;
 	boolean work=true;
+	public void reflection(ActionEvent actionEvent) throws InvalidCritterException {
+		String s = reflectionCritter.getText();
+		System.out.println(s);
+		try {
+			Critter.makeCritter(s);
+			selectbox.getItems().add(s);
+
+		}
+		catch(InvalidCritterException e){
+			e.printStackTrace();
+		}
+
+	}
 	public void startAni(ActionEvent actionEvent) {
 		//work =true;
 
@@ -184,7 +204,6 @@ public class Main extends Application {
 			animate(doSteps,numani, work);
 	}
 	private Timeline animation;
-
 	public void animate(int steps, int numAni, boolean work) {
 		if(work) {
 			int steps1 = 0;
@@ -200,7 +219,6 @@ public class Main extends Application {
 			animation.setCycleCount(numDisplayFrame);
 			animation.play();
 
-
 			Scene scene = new Scene(rootGrid, 10 * Params.world_width, 10 * Params.world_height);
 			secondStage.setTitle("Critter Grid");
 			secondStage.setScene(scene);
@@ -208,7 +226,6 @@ public class Main extends Application {
 			secondStage.show();
 
 		}
-
 
 	}
 	public void critterstep(int steps){
@@ -222,11 +239,7 @@ public class Main extends Application {
 		count = count + 1;
 		System.out.println("This is run: " + count);
 	}
-
-
-
-
 	public void stopAni(ActionEvent actionEvent) {
-			animation.stop();
+		animation.stop();
 	}
 }
