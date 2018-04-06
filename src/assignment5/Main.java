@@ -2,20 +2,13 @@ package assignment5;
 
 import javafx.animation.*;
 import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.geometry.HPos;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.geometry.VPos;
+
+import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.control.TextField;
@@ -31,19 +24,13 @@ import javafx.scene.shape.Polygon;
 import javafx.scene.paint.*;
 import javafx.scene.shape.*;
 
-import java.awt.*;
-//import java.awt.Rectangle;
-//import java.awt.Shape;
 import java.lang.reflect.Modifier;
 import java.net.URISyntaxException;
 import java.util.*;
 import java.io.*;
 
-import assignment5.Critter.CritterShape;
-import sun.awt.image.ImageWatched;
+import javafx.scene.text.*;
 
-import javax.swing.*;
-import javax.xml.soap.Text;
 
 import javafx.util.Duration;
 
@@ -157,6 +144,23 @@ public class Main extends Application {
 	public void stats(ActionEvent event) {
 		LinkedList<Critter> new2= Critter.getalivecritters();
 		Critter.runStats(new2);
+
+		Text text = new Text();
+		text.setText("Life is Good");
+		text.setX(100);
+		text.setY(100);
+		text.setFont(new Font(90));
+
+		Pane pane = new Pane(text);
+
+
+		Scene scene = new Scene(pane, 600, 300);
+
+		Stage statStage = new Stage();
+		statStage.setScene(scene);
+		statStage.setTitle("Critter Statistics");
+		statStage.show();
+
 	}
 	//done
 	public void end(ActionEvent event) {
