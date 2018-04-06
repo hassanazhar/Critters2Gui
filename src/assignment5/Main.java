@@ -141,11 +141,12 @@ public class Main extends Application {
 
 	}
 	//done
+	Stage statStage = new Stage();
 	public void stats(ActionEvent event) {
 		LinkedList<Critter> new2= Critter.getalivecritters();
 		java.util.Map<String, Integer> critter_count = Critter.runStats(new2);
 
-		GridPane pane = new GridPane();
+		VBox pane = new VBox();
 
 		for (Critter crit : new2) {
 			String crit_string = crit.toString();
@@ -169,10 +170,11 @@ public class Main extends Application {
 
 		Scene scene = new Scene(pane, 600, 300);
 
-		Stage statStage = new Stage();
+
 		statStage.setScene(scene);
 		statStage.setTitle("Critter Statistics");
 		statStage.show();
+		pane.getChildren().removeAll();
 
 	}
 	//done
