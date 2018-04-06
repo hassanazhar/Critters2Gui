@@ -615,10 +615,10 @@ public abstract class Critter {
 					 case(3):
 						Polygon d = new Polygon();
 						 d.getPoints().addAll(new Double[]{
-								 0.0,5.0,
-								 5.0,9.0,
-								 9.0,5.0,
-								 5.0,9.0}
+								 5.0,2.0,
+								 2.0,3.0,
+								 -2.0,2.0,
+								 -2.0,-2.0}
 						 );
 						 d.setStroke(a.viewOutlineColor());
 						 grid.add(d,a.x_coord,a.y_coord);
