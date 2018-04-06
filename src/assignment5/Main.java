@@ -144,8 +144,9 @@ public class Main extends Application {
 	Stage statStage = new Stage();
 	public void stats(ActionEvent event) {
 		LinkedList<Critter> new2= Critter.getalivecritters();
-		java.util.Map<String, Integer> critter_count = Critter.runStats(new2);
 
+		Critter.runStats(new2);
+		java.util.Map<String, Integer> critter_count = new java.util.HashMap<>();
 		VBox pane = new VBox();
 
 		for (Critter crit : new2) {
@@ -156,15 +157,17 @@ public class Main extends Application {
 			} else {
 				critter_count.put(crit_string, old_count.intValue() + 1);
 			}
-			System.out.println(crit);
 		}
-		Text out;
+		int numCritters = new2.size();
+		String openingLine = new String();
+		openingLine = "" + numCritters + " critters as follows --";
+		Text out = new Text(openingLine);
+		pane.getChildren().add(out);
 		String prefix = "";
 		for (String s : critter_count.keySet()) {
 			out = new Text(prefix + s + ":" + critter_count.get(s));
 			pane.getChildren().add(out);
-			prefix = ", ";
-			System.out.println(out);
+			//System.out.println(out);
 		}
 
 
