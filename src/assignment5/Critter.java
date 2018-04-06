@@ -606,8 +606,8 @@ public abstract class Critter {
 					 	Polygon p = new Polygon();
 						p.getPoints().addAll(new Double[]{
 								0.0,0.0,
-								5.0,10.0,
-								0.0,10.0}
+								5.0,9.0,
+								0.0,9.0}
 						);
 						p.setStroke(a.viewOutlineColor());
 						grid.add(p,a.x_coord,a.y_coord);
@@ -616,21 +616,26 @@ public abstract class Critter {
 						Polygon d = new Polygon();
 						 d.getPoints().addAll(new Double[]{
 								 0.0,5.0,
-								 5.0,10.0,
-								 10.0,5.0,
-								 5.0,10.0}
+								 5.0,9.0,
+								 9.0,5.0,
+								 5.0,9.0}
 						 );
 						 d.setStroke(a.viewOutlineColor());
 						 grid.add(d,a.x_coord,a.y_coord);
 						 break;
 					 case(4):
+					 	double shs = 1.0;
 						 Polygon star = new Polygon();
 						 star.getPoints().addAll(new Double[]{
-								 0.0,0.0,
+								 0.0, shs * 3,
+								 shs * 2, shs * 2,
+								 shs * 3, 0.0,
+								 shs * 4, shs * 2,
+								 shs * 6, shs * 3,
+								 shs * 4, shs * 4,
+								 shs * 3, shs * 6,
+								 shs * 2, shs * 4}
 
-								 5.0,10.0,
-								 10.0,5.0,
-								 5.0,10.0}
 						 );
 						 star.setStroke(a.viewOutlineColor());
 						 grid.add(star,a.x_coord,a.y_coord);
