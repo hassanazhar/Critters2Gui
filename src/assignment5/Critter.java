@@ -51,7 +51,7 @@ public abstract class Critter {
 	private static List<Critter> babies = new java.util.ArrayList<Critter>();
 	private static int[][] map = new int[Params.world_width][Params.world_height];
 	private static String [] realCritters = {"assignment5.Algae","assignment5.TragicCritter","assignment5.Craig","assignment5.Boss",
-			"assignment5.Ali", "assignment5.Tank","assignment5.BigBoss"};
+			"assignment5.Ali", "assignment5.Tank","assignment5.BigBoss","assignment5.AlgaephobicCritter"};
 	private final int torusx(int moves, int xcoord){
 		if ((xcoord+moves)>(Params.world_width-1)){
 			return(moves-1);
