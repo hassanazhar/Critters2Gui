@@ -1,5 +1,10 @@
 package assignment5;
-
+/*
+//Hassan Chughtai hac865
+//Ali Ahmed ama4943
+//EE422C - Project 5
+//Section - 15455
+*/
 //import project5.Critter.CritterShape;
 
 public class TragicCritter extends Critter {
