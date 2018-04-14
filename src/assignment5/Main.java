@@ -247,6 +247,7 @@ public class Main extends Application {
 			animation.play();
 
 			Scene scene = new Scene(rootGrid, 10 * Params.world_width, 10 * Params.world_height);
+			secondStage.close();
 			secondStage.setTitle("Critter Grid");
 			secondStage.setScene(scene);
 			secondStage.resizableProperty();
